@@ -1,0 +1,25 @@
+// Specific CSS for home_page
+#landing-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+#fb-login {
+  background-color: $blue;
+  height: 50px;
+  width: 200px;
+
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+
+  a {
+    align-self: center;
+    text-decoration: none;
+    color: white;
+   }
+
+}
