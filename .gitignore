@@ -5,6 +5,10 @@ tmp/*
 *.swp
 .DS_Store
 public/assets
+node_modules/
+yarn.lock
+
+
 
 .byebug_history
 application.yml
