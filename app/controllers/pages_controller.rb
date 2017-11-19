@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def landing
   end
+
+  def tmp_dashboard
+    #route here just as placeholder
+  end
 end

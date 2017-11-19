@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     # for now similar but will change once the rest is added
-    root to: 'pages#landing'
+    root to: 'pages#tmp_dashboard', as: :authenticated_root
   end
 
   root to: 'pages#landing'
