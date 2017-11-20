@@ -2,14 +2,13 @@
 #landing-container {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 70vh;
 }
-
 
 #fb-login {
   background-color: $blue;
   height: 50px;
-  width: 200px;
+  width: 220px;
 
   align-self: center;
 
@@ -19,7 +18,14 @@
   a {
     align-self: center;
     text-decoration: none;
+
     color: white;
+    font-size: 0.9em;
+
    }
 
+   transition: background-color 0.2s ease-in;
+   &:hover {
+     background-color: lighten($blue, 10%);
+   }
 }
