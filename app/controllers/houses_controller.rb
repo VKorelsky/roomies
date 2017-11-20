@@ -10,9 +10,12 @@ class HousesController < ApplicationController
     active_house_id = current_user.active_house_id
 
     # redirect to join or create screen if no active house
-    redirect_to new_house if not active_house_id
-
-    @house = House.find(active_house_id)
+    if active_house_id.nil?
+      redirect_to new_house_path
+    else
+      @house = House.find(active_house_id)
+      render :show
+    end
   end
 
   def edit
