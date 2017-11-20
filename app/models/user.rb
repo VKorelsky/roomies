@@ -4,6 +4,16 @@ class User < ApplicationRecord
 
   devise :timeoutable , :rememberable, :trackable, :omniauthable, omniauth_providers: ['facebook']
 
+  def active_house_id
+    main_membership = self.memberships.find_by(main: true)
+
+    if main_membership
+      return main_membership.house.id
+    end
+
+    return null
+  end
+
   def self.find_for_facebook_oauth(auth)
      user_params = auth.slice(:provider, :uid)
      user_params.merge! auth.info.slice(:email, :first_name, :last_name)
