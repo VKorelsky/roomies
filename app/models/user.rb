@@ -11,7 +11,7 @@ class User < ApplicationRecord
       return main_membership.house.id
     end
 
-    return null
+    return nil
   end
 
   def self.find_for_facebook_oauth(auth)
